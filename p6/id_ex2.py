@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import sys
-
 if __name__ == '__main__':
-    s = input("Введите число: ")
+    s = input("Введите предложение: ")
     n = 0
-    if s.isdigit():
-        for i in s:
-            n += int(i)
-    else:
-        print("Обнаружены не числовые символы", file=sys.stderr)
-        exit(1)
-    print(f"Сумма цифр числа {s}: {n}")
+    for i in s:
+        if i == s[0]:
+            n += 1
+        else:
+            print("Последовательность прервана")
+            print(f"Число вхождений {n}")
+            break
+    print("Последовательность состоит только из одного символа")
+    print(f"Число вхождений {n}")

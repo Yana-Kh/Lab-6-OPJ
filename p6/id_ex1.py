@@ -3,10 +3,10 @@
 
 if __name__ == '__main__':
     s = input("Введите предложение: ")
-    for i in s:
-        if i == ",":
-            print("Появилась запятая")
-            exit(1)
-        else:
-            print(i)
-    print("Запятых нет")
+    if ',' in s:
+        print("Появилась запятая")
+        s = s[:s.index(',')]
+    else:
+        print("Запятых нет")
+    print(f"Строка до первой запятой: {s}")
+
