@@ -3,10 +3,10 @@
 
 if __name__ == '__main__':
     s = input("Введите предложение: ")
-    if ',' in s:
+    flag = s.find(',')
+    if flag >= 0:
         print("Появилась запятая")
-        s = s[:s.index(',')]
+        s = s[:flag]
     else:
         print("Запятых нет")
     print(f"Строка до первой запятой: {s}")
-
